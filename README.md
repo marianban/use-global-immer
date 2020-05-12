@@ -11,7 +11,7 @@ npm i use-global-immer use-immer immer
 ```js
 // store.js
 
-import { createImmerStore } from 'useGlobalImmer';
+import { createImmerStore } from 'use-global-immer';
 
 const store = createImmerStore({
   counter: 0,
@@ -30,7 +30,7 @@ export const Counter = () => {
   return (
     <div>
       <div>{counter}</div>
-      <button onClick={() => setCounter(value => void value +)}>Increment</button>
+      <button onClick={() => setCounter(value => value + 1)}>Increment</button>
     </div>
   );
 };
