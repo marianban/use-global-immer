@@ -1,7 +1,7 @@
 {
   "name": "use-global-immer",
   "version": "0.0.1",
-  "description": "",
+  "description": "Global immer store",
   "main": "index.js",
   "scripts": {
     "build": "microbundle",
@@ -20,7 +20,8 @@
   "keywords": [
     "immer",
     "react",
-    "hooks"
+    "hook",
+    "store"
   ],
   "author": "Marian Ban",
   "license": "MIT",
