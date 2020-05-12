@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { createImmerStore } from '../createImmerStore';
-import { GlobalImmerProvider } from '../GlobalImmerProvider';
-import { useGlobalImmer } from '../useGlobalImmer';
+import { createImmerStore } from '../src/createImmerStore';
+import { GlobalImmerProvider } from '../src/GlobalImmerProvider';
+import { useGlobalImmer } from '../src/useGlobalImmer';
 import { renderHook, act } from '@testing-library/react-hooks';
 
 const firstUserName = 'Claudia Keebler';
