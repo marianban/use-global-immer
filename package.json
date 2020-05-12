@@ -1,0 +1,56 @@
+{
+  "name": "use-global-immer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "microbundle",
+    "test": "jest",
+    "test:coverage": "jest --collect-coverage",
+    "test:watch": "jest --watch",
+    "publish": "npm run build && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianban/use-global-immer.git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "immer",
+    "react",
+    "hooks"
+  ],
+  "author": "Marian Ban",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marianban/use-global-immer/issues"
+  },
+  "homepage": "https://github.com/marianban/use-global-immer#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@testing-library/jest-dom": "^5.7.0",
+    "@testing-library/react": "^10.0.4",
+    "@testing-library/react-hooks": "^3.2.1",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1",
+    "microbundle": "^0.12.0",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "react": "^16.13.1",
+    "immer": "^6.0.5",
+    "use-immer": "0.4.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": ">=16.8.3",
+    "immer": ">=6.0.0",
+    "use-immer": ">=0.4.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
