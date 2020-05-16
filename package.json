@@ -9,7 +9,7 @@
   "react-native": "dist/index.module.js",
   "source": "src/index.js",
   "scripts": {
-    "build": "microbundle",
+    "build": "microbundle --jsx React.createElement",
     "test": "jest",
     "test:coverage": "jest --collect-coverage",
     "test:watch": "jest --watch",
