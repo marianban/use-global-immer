@@ -1,5 +1,7 @@
 # Use Global Immer
 
+use-global-immer is a react hook. It lets you define a global app state that can be shared, accessed and modified from your react components.
+
 Don't forget to read the [official immer documentation](https://immerjs.github.io/immer/docs/introduction) before using use-global-immer.
 
 ## Installation
@@ -82,7 +84,7 @@ export const store = createImmerStore({
 });
 ```
 
-In general we don't want to mix our store related logic with react rendering logic. Instead we would like to maintain a clear separation of concerns. There are multiple ways how this can be achieved. Some examples are container components or custom hooks. We are going to use a Container Component pattern, which is a well known redux pattern, so all our store related logic is encapsulated into a container component.
+In general we don't want to mix our store related logic with react rendering logic. Instead we would like to maintain a clear separation of concerns. There are multiple ways how this can be achieved. Some examples are container components or custom hooks. We are going to use the Container Component pattern, which is a well known redux pattern, so all our store related logic is encapsulated into a container component.
 
 ```jsx
 // src/containers/Header.js
@@ -100,9 +102,9 @@ const ConnectedHeader = () => {
   const addTodo = (text) => {
     setTodos(
       (todos) =>
-        // the return value of the push method is the new length
-        // however we need to return undefined otherwise todos will be set to the returned value
-        // we can use a void operator (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void) operator to write it as an one liner or wrap todos.push into a function body with {}
+        // the return value of push is the new length
+        // however we need to return undefined otherwise todos will be set to length
+        // lets use the void operator (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void) to discard the returned length
         void todos.push({
           text,
           id: v4(),
