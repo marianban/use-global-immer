@@ -1,6 +1,6 @@
 {
   "name": "use-global-immer",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Global immer store",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
