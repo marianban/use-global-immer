@@ -5,7 +5,7 @@ import { createImmerStore } from 'use-global-immer';
 export const store = createImmerStore({
   todos: [
     {
-      text: 'Use Regrok',
+      text: 'Use Global Immer',
       completed: false,
       id: v4(),
     },
