@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import { useImmer } from 'use-immer';
 import { GlobalImmerContext } from './GlobalImmerContext';
 import { deepFreeze } from './deepFreeze';
@@ -12,4 +13,9 @@ export const GlobalImmerProvider = ({ children, store }) => {
       {children}
     </GlobalImmerContext.Provider>
   );
+};
+
+GlobalImmerProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+  store: PropTypes.object.isRequired,
 };

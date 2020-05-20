@@ -11,9 +11,13 @@
   "scripts": {
     "build": "microbundle --jsx React.createElement",
     "test": "jest",
+    "lint": "eslint --ignore-path .gitignore .",
     "test:coverage": "jest --collect-coverage",
     "test:watch": "jest --watch",
-    "pub": "npm run build && npm publish --access public"
+    "pub": "npx np",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
+    "check-format": "prettier --ignore-path .gitignore --list-different \"**/*.+(js|json)\"",
+    "validate": "npm run check-format && npm run lint && npm run test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -38,23 +42,30 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
-    "@testing-library/jest-dom": "^5.7.0",
+    "@testing-library/jest-dom": "^5.8.0",
     "@testing-library/react": "^10.0.4",
     "@testing-library/react-hooks": "^3.2.1",
     "babel-jest": "^26.0.1",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.2.5",
+    "immer": "^6.0.5",
     "jest": "^26.0.1",
     "microbundle": "^0.12.0",
+    "prettier": "^2.0.5",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
-    "react": "^16.13.1",
-    "immer": "^6.0.5",
     "use-immer": "0.4.0"
   },
   "dependencies": {},
   "peerDependencies": {
     "react": ">=16.8.3",
     "immer": ">=6.0.0",
-    "use-immer": ">=0.4.0"
+    "use-immer": ">=0.3.0",
+    "prop-types": ">=15.0.0"
   },
   "browserslist": [
     "defaults"
