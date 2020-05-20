@@ -1,7 +1,5 @@
 {
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run validate"
-    }
+  "hooks": {
+    "pre-commit": "npm run validate"
   }
 }
